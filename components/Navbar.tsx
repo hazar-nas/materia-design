@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   FaSearch,
   FaWpexplorer,
@@ -9,6 +9,8 @@ import SubNavIcon from './SubNavIcon'
 import SubNavItem from './SubNavItem'
 
 function Navbar() {
+  const [showSubNav, setShowSubNav] = useState<boolean>(true)
+
   return (
     <div>
       <div className=" flex  flex-col bg-primaryBlack lg:grid  lg:grid-cols-[200px_540px_300px]  lg:justify-center lg:gap-x-20 lg:py-4">
@@ -20,9 +22,21 @@ function Navbar() {
               evin için...
             </span>
           </h2>
+          <button
+            onClick={() => setShowSubNav((showSubNav) => !showSubNav)}
+            className={`${
+              showSubNav ? '-rotate-90' : 'rotate-45'
+            } absolute right-6 top-3 text-3xl text-white transition-transform lg:hidden`}
+          >
+            +
+          </button>
         </div>
-        {/* SearchBar */}
-        <div className=" flex lg:self-end">
+        {/* SearchBar  */}
+        <div
+          className={`${
+            showSubNav ? 'hidden ' : 'mb-2'
+          } lg:mb-0 lg:flex lg:self-end `}
+        >
           <div className="w-full">
             <div className=" relative flex w-full flex-wrap  self-center rounded">
               <input
@@ -37,7 +51,11 @@ function Navbar() {
           </div>
         </div>
         {/* Buttons */}
-        <div className=" my-2 w-[350px] self-center text-center lg:my-0 lg:flex lg:self-end ">
+        <div
+          className={`${
+            showSubNav ? 'hidden' : 'my-2  w-[350px] self-center text-center '
+          }  lg:my-0 lg:flex lg:self-end`}
+        >
           <button className=" mr-4 w-1/3 rounded-md border bg-primaryGreen p-1 text-sm font-bold  text-primaryBlack transition-transform  hover:scale-105   hover:border-transparent lg:mr-4 lg:w-1/2 lg:rounded-2xl">
             Hizmet Ver
           </button>
