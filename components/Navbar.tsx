@@ -37,8 +37,8 @@ function Navbar() {
           </div>
         </div>
         {/* Buttons */}
-        <div className=" my-2 min-w-full max-w-sm text-center lg:flex lg:self-end ">
-          <button className=" mr-5 w-1/3 rounded-md border bg-primaryGreen p-1 text-sm font-bold  text-primaryBlack transition-transform  hover:scale-105   hover:border-transparent lg:mr-4 lg:w-1/2 lg:rounded-2xl">
+        <div className=" my-2 w-[350px] self-center text-center lg:my-0 lg:flex lg:self-end ">
+          <button className=" mr-4 w-1/3 rounded-md border bg-primaryGreen p-1 text-sm font-bold  text-primaryBlack transition-transform  hover:scale-105   hover:border-transparent lg:mr-4 lg:w-1/2 lg:rounded-2xl">
             Hizmet Ver
           </button>
           <button className=" w-1/3 truncate border bg-transparent p-1 text-sm font-semibold  text-white  transition-transform hover:scale-105  lg:mr-4 lg:w-1/2 lg:rounded-2xl ">
